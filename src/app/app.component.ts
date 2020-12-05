@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from 'firebase';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyPhotApplication';
+
+  constructor(public userService: UserService) {
+  
+   }
+   
+   currentUser = this.userService.user;
+
+  logout(){
+    console.log("User tried to log out")
+    this.userService.logout();
+  }
 }

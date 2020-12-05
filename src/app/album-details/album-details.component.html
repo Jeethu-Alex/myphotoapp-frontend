@@ -1,0 +1,11 @@
+<ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]= "['/photos']">Photo Details</a>
+    </li>
+  </ul>
+  <div class="float-right" style="padding-top: 20px; padding-right: 30px;">
+    <button [routerLink]="['/upload', albumId]" type="button" class="btn btn-success">Upload Photo</button>
+</div>
+<br>
+Details of specific album will be displayed here.
+  <router-outlet></router-outlet>
